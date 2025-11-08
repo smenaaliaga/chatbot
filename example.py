@@ -12,7 +12,7 @@ if torch.cuda.is_available():
     print(f"CUDA versión: {torch.version.cuda}")
 
 # 1. Cargar documento
-loader = PyPDFLoader("Imacec septiembre 2025.pdf")
+loader = PyPDFLoader("data/Imacec septiembre 2025.pdf")
 docs = loader.load()
 
 # 2. Crear embeddings locales con GPU
