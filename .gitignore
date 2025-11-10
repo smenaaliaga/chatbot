@@ -63,7 +63,8 @@ desktop.ini
 *.pdf
 
 # chroma
-chroma_metodo/
+chroma_store/
+chroma_example/
 
 # json
 *.json

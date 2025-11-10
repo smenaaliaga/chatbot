@@ -17,7 +17,7 @@ os.environ["TRANSFORMERS_VERBOSITY"] = "error"
 MODEL_ID = "microsoft/Phi-3-mini-4k-instruct"
 DTYPE = torch.bfloat16 if torch.cuda.is_available() and torch.cuda.get_device_capability(0)[0] >= 8 else torch.float16
 EMB_MODEL_ID = "intfloat/multilingual-e5-base"
-CHROMA_DIR = "./chroma_metodo"
+CHROMA_DIR = "./chroma_store"
 METHODO_JSON = "./data/metodologia.json"
 
 # Datos numéricos simulados
@@ -45,7 +45,7 @@ gen_pipe = pipeline(
     "text-generation",
     model=model,
     tokenizer=tokenizer,
-    max_new_tokens=150,  # Reducido para respuestas más rápidas
+    max_new_tokens=150,
     do_sample=False,
     pad_token_id=tokenizer.eos_token_id,
     return_full_text=False
