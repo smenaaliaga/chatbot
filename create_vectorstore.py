@@ -1,4 +1,4 @@
-import json, os
+import json, os, time
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
@@ -41,6 +41,7 @@ def clean_metadata(metadata):
     return clean
 
 def build_faq_index():
+    start = time.time()
     data = load_jsonl_or_json(FAQ_JSON)
     texts, ids, metas = [], [], []
     for item in data:
@@ -58,10 +59,12 @@ def build_faq_index():
     except Exception:
         vs = Chroma.from_texts(texts=texts, metadatas=metas, ids=ids,
                                embedding=EMB, persist_directory=FAQ_DIR)
-        
-    print(f"[OK] FAQ index en {FAQ_DIR} — {len(texts)} items")
+    
+    elapsed = time.time() - start
+    print(f"[OK] FAQ index en {FAQ_DIR} — {len(texts)} items — {elapsed:.2f}s")
 
 def build_claims_index():
+    start = time.time()
     data = load_jsonl_or_json(CLAIMS_JSON)
     texts, ids, metas = [], [], []
     for item in data:
@@ -81,11 +84,17 @@ def build_claims_index():
     except Exception:
         vs = Chroma.from_texts(texts=texts, metadatas=metas, ids=ids,
                                embedding=EMB, persist_directory=CLAIMS_DIR)
-        
-    print(f"[OK] Claims index en {CLAIMS_DIR} — {len(texts)} items")
+    
+    elapsed = time.time() - start
+    print(f"[OK] Claims index en {CLAIMS_DIR} — {len(texts)} items — {elapsed:.2f}s")
 
 if __name__ == "__main__":
+    total_start = time.time()
     os.makedirs(FAQ_DIR, exist_ok=True)
     os.makedirs(CLAIMS_DIR, exist_ok=True)
+    
     build_faq_index()
     build_claims_index()
+    
+    total_elapsed = time.time() - total_start
+    print(f"\n[DONE] Tiempo total de ejecución: {total_elapsed:.2f}s")

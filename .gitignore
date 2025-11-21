@@ -62,11 +62,16 @@ desktop.ini
 # PDF documents
 *.pdf
 
-# chroma
+# Vectorstore
 vectorstore/chroma_claims/
 vectorstore/chroma_example/
 vectorstore/chroma_faq/
 vectorstore/chroma_store/
 
-# json
-*.json
+# Pero mantener los .gitkeep
+!vectorstore/.gitkeep
+!vectorstore/**/.gitkeep
+
+# JSON: Solo ignorar en carpeta data/
+data/*.json
+!data/.gitkeep

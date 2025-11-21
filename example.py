@@ -36,11 +36,11 @@ pipe = pipeline(
     "text-generation",
     model=model,
     tokenizer=tokenizer,
-    max_new_tokens=300,  # Aumentado para respuestas más largas
-    temperature=0.2,
+    max_new_tokens=500, 
+    temperature=0.1,
     do_sample=True,
     top_p=0.95,
-    return_full_text=False  # Solo texto generado, no el prompt
+    return_full_text=False 
 )
 
 llm = HuggingFacePipeline(pipeline=pipe)
