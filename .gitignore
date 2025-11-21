@@ -63,8 +63,10 @@ desktop.ini
 *.pdf
 
 # chroma
-vectorstore/*/
-!vectorstore/.gitkeep
+vectorstore/chroma_claims/
+vectorstore/chroma_example/
+vectorstore/chroma_faq/
+vectorstore/chroma_store/
 
 # json
 *.json
