@@ -59,12 +59,12 @@ desktop.ini
 # Logs
 *.log
 
-# PDF documents (opcional - descomenta si no quieres versionar PDFs)
+# PDF documents
 *.pdf
 
 # chroma
-chroma_store/
-chroma_example/
+vectorstore/*/
+!vectorstore/.gitkeep
 
 # json
 *.json
