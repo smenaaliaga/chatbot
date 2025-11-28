@@ -235,7 +235,7 @@ def print_results(docs_with_scores, show_metadata=False):
             print(f"    Pregunta canónica: {canonical}")
         
         answer = doc.metadata.get("answer", "N/A")
-        print(f"\n -> Respuesta: {answer[:200]}..." if len(answer) > 200 else f"\n -> Respuesta: {answer}")
+        print(f"\n -> Respuesta: {answer}..." if len(answer) > 200 else f"\n -> Respuesta: {answer}")
         
         # Siempre mostrar keywords si existen
         keywords = doc.metadata.get("keywords", "")

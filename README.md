@@ -70,9 +70,19 @@ En desarrollo.
    - ¿Cuáles son los sectores más relevantes en el cálculo del IMACEC?
    - ¿Qué actividades económicas destacan en el IMACEC?
 
+12. **Desglose Sectorial del IMACEC**
+   - ¿Cómo se desglosa la información de los sectores económicos en el IMACEC?
+   - ¿Qué sectores principales incluye el desglose del IMACEC?
+   - ¿Qué actividades económicas forman parte del desglose del IMACEC?
+
+13. **Metodología del PIB Real**
+   - ¿Cuál es la metodología del cálculo real del PIB?
+   - ¿En qué consiste la metodología utilizada para calcular el PIB en términos reales?
+   - ¿Cómo se lleva a cabo el cálculo del PIB real según la metodología de encadenamiento de volumen?
+
 ### Ejemplos de Preguntas Naturales
 
-12. **Formulaciones informales**
+14. **Formulaciones informales**
    - ¿Qué día del mes sale el IMACEC?
    - ¿En qué se diferencia el IMACEC del PIB?
    - ¿Cuáles son las formas de calcular el PIB?
@@ -563,9 +573,3 @@ chromadb                  # Core de Chroma
 - Cross-encoder model: ~450MB
 - Overhead Chroma: ~50MB
 - **Total**: ~512MB RAM
-
-
-## DESAFIOS
-
-- Seguir llenando documentos
-- Revisar los scores

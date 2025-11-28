@@ -1,0 +1,12 @@
+[
+  {
+    "tokens": ["¿","Cuál","fue","el","IMACEC","de","septiembre","de","2024","?"],
+    "slot_labels": ["O","O","O","O","B-METRIC","O","B-DATE","I-DATE","I-DATE","O"],
+    "intent": "DATA_API"
+  },
+  {
+    "tokens": ["¿","Cómo","se","calcula","el","PIB","real","encadenado","?"],
+    "slot_labels": ["O","O","O","O","O","B-METRIC","I-METRIC","I-METRIC","O"],
+    "intent": "METHODOLOGY"
+  }
+]
